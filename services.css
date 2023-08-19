@@ -13,6 +13,7 @@ body {
     background-color: rgb(0, 53, 158);
     background-size: cover;
     background-position: center;
+
     font-family: 'Josefin Sans', sans-serif;
 
 }
@@ -31,20 +32,16 @@ header {
 
 }
 
-
-
 .logo {
     font-size: 2em;
     color: navy;
     user-select: none;
 }
-
-.navigation {
+.navigation{
     margin-top: 2%;
 }
 
 .navigation a {
-
     position: relative;
     font-size: 1.1em;
     color: white;
@@ -112,12 +109,12 @@ header {
 .navigation .hamburger .bar,
 .hamburger::after,
 .hamburger::before {
+    border-radius: 6px;
     content: '';
     display: block;
     width: 100%;
     height: 5px;
     background-color: white;
-    border-radius: 6px;
     margin: 6px 0px;
     transition: 0.4s;
 }
@@ -136,7 +133,6 @@ header {
 }
 
 .mobile-nav {
-
     position: fixed;
     top: 0;
     left: 100%;
@@ -187,6 +183,16 @@ header {
         align-items: center;
     }
 
+    .container {
+        margin-top: 80%;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+
 }
 
 @media(min-width: 768px) {
@@ -199,17 +205,19 @@ header {
     }
 
 
+
+
 }
 
 .wrapper {
     position: relative;
     width: 400px;
     height: 440px;
-    background: slateblue;
-    border: 2px solid rgba(46, 255, 248, 0.5);
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
     border-radius: 20px;
     backdrop-filter: blur(20px);
-    box-shadow: 0 0 30px rgba(26, 4, 89, 0.5);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -220,14 +228,13 @@ header {
 }
 
 .wrapper.form-box {
-
     width: 100%;
     padding: 40px;
 }
 
 .form-box h2 {
     font-size: 2em;
-    color: white;
+    color: black;
     text-align: center;
 }
 
@@ -235,7 +242,7 @@ header {
     position: relative;
     width: 100%;
     height: 50px;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid black;
     margin: 30px 0;
 }
 
@@ -245,7 +252,7 @@ header {
     left: 5px;
     transform: translateY(-50%);
     font-size: 1em;
-    color: white;
+    color: black;
     font-weight: 500;
     pointer-events: none;
     transition: .5s;
@@ -263,7 +270,7 @@ header {
     border: none;
     outline: none;
     font-size: 1em;
-    color: white;
+    color: black;
     font-weight: 600;
     padding: 0 35px 0 5px;
 
@@ -273,7 +280,7 @@ header {
     position: absolute;
     right: 8px;
     font-size: 1.2em;
-    color: white;
+    color: black;
     line-height: 57px;
 
 }
@@ -281,13 +288,13 @@ header {
 .cover {
     display: flex;
     align-items: center;
+    background-color: navy;
 }
 
 .box {
-    border-radius: 6px;
     margin: 10px;
-    width: 277px;
-    height: 800px;
+    width: 280px;
+    height: 380px;
     box-shadow: -1px 0 10px #000000;
     background-color: cornflowerblue;
     align-items: center;
@@ -295,10 +302,9 @@ header {
 }
 
 .box1 {
-    border-radius: 6px;
     margin: 10px;
-    width: 277px;
-    height: 800px;
+    width: 280px;
+    height: 380px;
     box-shadow: -1px 0 10px #ff0b0b;
     background-color: rgb(200, 162, 229);
     align-items: center;
@@ -313,146 +319,73 @@ img {
 h5 {
     color: white;
 }
-
-.posts-container {
-    right: 0;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-}
-
-html {
-    box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
-}
-
-.column {
-    float: left;
-    width: 30%;
-    margin-bottom: 16px;
-    padding: 0 8px;
-}
-
-.card {
-    background-color: cornflowerblue;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: 8px;
-}
-
-
-.about-section {
-    padding: 100px;
-    text-align: center;
-    background-color: navy;
+h2{
     color: white;
 }
 
 .container {
-    padding: 0 16px;
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.container::after,
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-.title {
-    color: navy;
-}
-
-.button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
+.container h2 {
     text-align: center;
+    text-transform: uppercase;
+    font-size: 35px;
+    margin-bottom: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container .services {
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.container .services .card {
+    width: 330px;
+    text-align: center;
+    background: #20b0ee;
+    padding: 20px 15px;
+    margin-bottom: 30px;
+    border-radius: 10px;
     cursor: pointer;
-    width: 100%;
+    transition: 0.3s;
 }
 
-.button:hover {
-    background-color: #555;
+.container .services .card:hover {
+    background: chocolate;
 }
 
-.home-section {
-    padding: 100px;
-    text-align: center;
-    background-color: navy;
+.container .services .card .content {
+    transition: 0.3s;
+}
+
+.container .services .card:hover .content {
+    transform: scale(1.07);
+}
+
+.container .services .card .content .icon {
+    padding: 5px 0;
     color: white;
 }
 
-.home-section h1 {
-    text-align: left;
-    padding: 50px;
-
+.container .services .card .content .icon i {
+    font-size: 40px;
 }
 
-.home-section h2 {
-    text-align: left;
-    padding: 50px;
+.container .services .card:hover .content .title {
+    color: white;
 }
 
-.home-section p {
-    text-align: left;
-    padding: 50px;
-}
-
-.card2 {
-    border-radius: 6px;
-    background-color: cornflowerblue;
-}
-
-.card3 .imagee {
-    height: 1080px;
-    width: 1170px;
-}
-
-.card3 p {
-
-    text-align: left;
-    padding: 1px;
-}
-
-@media screen and (max-width: 650px) {
-    .column {
-        width: 95%;
-        display: block;
-    }
-
-    .card2 {
-        margin: 10%;
-        width: 400px;
-    }
-
-    .card3 .imagee {
-        height: 300px;
-        width: 490px;
-    }
-}
-
-.card2 img {
-
-    height: 300px;
-}
-
-.form-box .btn {
-    background-color: white;
-    text-decoration: #000;
-    border-radius: 5px;
-}
-
-.card2 .button {
-    background-color: navy;
-    border-radius: 30px;
+.container .services .card .content .title {
+    padding: 5px 0;
+    font-size: 24px;
+    font-weight: 500;
+    color: chocolate;
+    transition: 0.3s;
 }
